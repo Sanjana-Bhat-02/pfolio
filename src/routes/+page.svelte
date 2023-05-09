@@ -22,7 +22,8 @@
 		text-align: center;
 		padding: 1em;
 		max-width: 1200px;
-		background-color: black;
+		background-color: rgb(17, 32, 55);
+		
 	}
 
 	h1 {

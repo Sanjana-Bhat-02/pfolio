@@ -134,9 +134,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 6;
-    overflow-x: hidden;
+    overflow-y: hidden;
   }
 </style> 
 
