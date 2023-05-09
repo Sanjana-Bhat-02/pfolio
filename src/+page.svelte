@@ -1,6 +1,6 @@
 <script>
     import Main from './+layout.svelte';
-	import Header from '../components/Header.svelte'
+	import Header from './components/Header.svelte'
 	export let name;
     
     
