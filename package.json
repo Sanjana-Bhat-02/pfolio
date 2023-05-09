@@ -26,6 +26,7 @@
 	"type": "module",
 	"dependencies": {
 		"svelte-particles": "^2.9.3",
-		"svelte-preprocess": "^5.0.3"
+		"svelte-preprocess": "^5.0.3",
+		"vercel": "^29.1.1"
 	}
 }
