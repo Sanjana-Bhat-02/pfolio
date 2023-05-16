@@ -1,7 +1,27 @@
 <script>
     import { onMount } from "svelte";
+    import { LottiePlayer } from '@lottiefiles/svelte-lottie-player';
+
     import Header from "../components/Header.svelte";
     import Footer from "../components/Footer.svelte";
+
+    let controlsLayout = [
+    'previousFrame',
+    'playpause',
+    'stop',
+    'nextFrame',
+    'progress',
+    'frame',
+    'loop',
+    'spacer',
+    'background',
+    'snapshot',
+    'zoom',
+    'info',
+  ];
+
+
+
     let particlesConfig = {
         particles: {
             number: {
@@ -112,8 +132,9 @@
         },
         retina_detect: true,
     };
-
+    let shouldRenderLottiePlayer = false;
     onMount(() => {
+        shouldRenderLottiePlayer = true;
         const script = document.createElement("script");
         script.src =
             "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
@@ -126,32 +147,72 @@
 </script>
 
 <div class="wrapper">
-    <div id="particles-js" class="bg-zinc-900" />
-    <Header />
+    <div id="particles-js" class="bg-slate-950" />
+    <Header /> 
+    <div class="container">
     <div class="con">
         <div class="sign">
             <span class="fast-flicker">Hey&nbsp;</span>There!&nbsp;<span
                 class="flicker">I'm&nbsp;</span
             >Sanjana
         </div>
+
+        
     </div>
 
+   
     <div class="subtitle">
-        <p>Aspiring</p>
-        <p>Frontend</p>
-        <p>Developer</p>
+        <p class="word">Aspiring&nbsp;</p>
+        <p class="word">Frontend&nbsp;</p>
+        <p class="word">Developer&nbsp;</p>
     </div>
+    <div class="animation">
+    {#if shouldRenderLottiePlayer}
+    <LottiePlayer
+      src="https://assets2.lottiefiles.com/packages/lf20_wxUJzo.json"
+      autoplay={true}
+      loop={true}
+      controls={false}
+      renderer="svg"
+      background="transparent"
+      height={300}
+      width={300}
+      controlsLayout={controlsLayout}
+    />
+  {/if}
+    </div>
+</div>
     <Footer />
 </div>
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+    .animation {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -0.5%);
+        margin-top: 100px;
+    }
+    .container {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+    }
     .subtitle {
-        margin-top: 20px;
+        margin-top: 80px;
+        /* position: absolute;
+        z-index: 8; */
         display: flex;
+        
+        justify-content: center;
+
         color: white;
     }
     .wrapper {
+        display: flex;
+        flex-direction: column;
         position: relative;
         height: 100vh;
     }
@@ -193,22 +254,19 @@
         left: 50%;
         top: 50%;
         font-family: "Poppins";
-        text-transform: uppercase;
         font-size: 3em;
         color: #ffe6ff;
         text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
             -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
             0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+
         animation: shine 2s forwards, flicker 3s infinite;
     }
 
     p {
         color: white;
         font-size: 2em;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        gap: 20px;
     }
     @keyframes blink {
         0%,
@@ -382,6 +440,11 @@
     @media (max-width: 768px) {
         .sign {
             flex-direction: column;
+        }
+
+        .subtitle {
+            font-size: 0.7em;
+            margin-top: 60%;
         }
     }
 </style>

@@ -1,4 +1,24 @@
-<footer class="bg-zinc-900 text-center text-white dark:bg-zinc-900 fixed bottom-0 left-0 w-full">
+<script>
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const footer = document.getElementById("footer");
+
+    window.addEventListener("scroll", () => {
+      const scrolledToBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+
+      if (scrolledToBottom) {
+        footer.classList.remove("invisible");
+        footer.classList.add("visible");
+      } else {
+        footer.classList.remove("visible");
+        footer.classList.add("invisible");
+      }
+    });
+  });
+</script>
+
+<footer id="footer" class="bg-transparent text-center text-white dark:bg-transparent fixed bottom-0 left-0 w-full backdrop-blur-lg invisible">
     <div class="container pt-9">
       <div class="mb-9 flex flex-wrap justify-center">
         <a href="#" class="mr-9 text-neutral-800 dark:text-neutral-200">
@@ -68,12 +88,10 @@
   
     <!--Copyright section-->
     <div
-      class="bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
-      © 2023 Copyright:
-      <a
-        class="text-neutral-800 dark:text-neutral-400"
-        href="https://tailwind-elements.com/"
-        >Tailwind Elements</a
-      >
+      class="bg-transparent p-4 text-center text-neutral-700 dark:bg-transparent dark:text-neutral-200">
+      
+      Sanjana Bhat © 2023 - Present · All rights reserved.
     </div>
   </footer>
+
+

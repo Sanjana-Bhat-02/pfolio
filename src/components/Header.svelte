@@ -1,6 +1,7 @@
 <nav class="bg-transparent dark:bg-transparent fixed w-full z-20 top-0 left-0 backdrop-blur-lg bg-opacity-0">
   <div class="max-w-screen-xl flex flex-wrap items-end justify-between mx-auto p-4">
-    <a href="/" class="flex items-center">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/icon.svg" width="30px" height="30px" alt="">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sanjana</span>
     </a>
 
