@@ -1,7 +1,10 @@
 <script>
-	import Main from "./+layout.svelte";
+	import Layout from "./+layout.svelte";
+	import Content from "../components/Content.svelte";
 </script>
 
-<Main />
+<Layout>
+	<Content/>
+</Layout>
 
 

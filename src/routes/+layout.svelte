@@ -2,23 +2,22 @@
   import Background from "../components/Background.svelte";
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
+  import "./styles.css";
+  import Content from "../components/Content.svelte";
 </script>
 
-<Background>
-  <Header />
-  <div class="some">
-    <slot />
-  </div>
-
-<Footer />
-</Background>
-
-<style>
-  .some {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-</style>
+<div class="bg-slate-950 min-h-screen flex flex-col">
+  <header class="sticky top-0 z-50">
+    <Header />
+  </header>
+  <div class="overflow-y-auto">
+  <Background>
+    <Content/>  <!-- <slot/> -->
+    <footer class="sticky bottom-0 z-50">
+      <Footer />
+    </footer>
+  </Background>
+  
+</div>
+  
+</div>
