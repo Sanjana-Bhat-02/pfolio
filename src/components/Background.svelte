@@ -125,7 +125,7 @@
     });
 </script>
 
-<div id="particle-js" >
+<div id="particle-js">
     <slot/>
 </div>
 
