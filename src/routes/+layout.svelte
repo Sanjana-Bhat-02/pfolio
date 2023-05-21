@@ -12,9 +12,10 @@
   </header>
   <div class="overflow-y-auto">
   <Background>
-    <Content/>  <!-- <slot/> -->
+    <!-- <Content/>   -->
+    <slot />
     
-  </Background>
+</Background>
   <footer class="sticky bottom-0 z-50">
     <Footer />
   </footer>

@@ -126,7 +126,7 @@
 </script>
 
 <div id="particle-js">
-    <slot/>
+    <slot />
 </div>
 
 
