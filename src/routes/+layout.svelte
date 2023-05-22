@@ -16,7 +16,17 @@
     </div>
   </div>
 
-  <footer class="flex-shrink-0">
+  <footer class="fixed z-7">
     <Footer />
   </footer>
 </div>
+
+<style>
+  header {
+    inset: 0 0 auto;
+  }
+
+  footer {
+    inset: auto 0 0;
+  }
+</style>
