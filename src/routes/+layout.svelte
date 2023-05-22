@@ -1,25 +1,22 @@
 <script>
-  import Background from "../components/Background.svelte";
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import "./styles.css";
-  import Content from "../components/Content.svelte";
 </script>
 
-<div class="bg-slate-950 min-h-screen flex flex-col bg-fixed">
+<div class="flex flex-col min-h-screen bg-slate-950 bg-cover">
   <header class="sticky top-0 z-50">
     <Header />
   </header>
-  <div class="overflow-y-auto">
-  <Background>
-    <!-- <Content/>   -->
-    <slot />
-    
-</Background>
-  <footer class="sticky bottom-0 z-50">
+
+  <div class="flex-grow">
+    <div class="overflow-y-auto">
+      <!-- Content -->
+      <slot />
+    </div>
+  </div>
+
+  <footer class="flex-shrink-0">
     <Footer />
   </footer>
-  
-</div>
-  
 </div>

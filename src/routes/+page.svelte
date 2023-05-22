@@ -3,8 +3,8 @@
 	import Content from "../components/Content.svelte";
 </script>
 
-<Layout>
+
 	<Content/>
-</Layout>
+
 
 
