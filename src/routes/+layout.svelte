@@ -2,31 +2,25 @@
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import "./styles.css";
+
 </script>
 
-<div class="flex flex-col min-h-screen bg-slate-950 bg-cover">
-  <header class="sticky top-0 z-50">
+<body class="bg-slate-950">
+  <header>
     <Header />
   </header>
 
-  <div class="flex-grow">
-    <div class="overflow-y-auto">
-      <!-- Content -->
-      <slot />
-    </div>
+  <div class="flex flex-col flex-1">
+    <!-- Content -->
+    <slot />
+    <footer class="mt-0">
+      <Footer />
+    </footer>
   </div>
 
-  <footer class="fixed z-7">
-    <Footer />
-  </footer>
-</div>
+  
+</body>
 
 <style>
-  header {
-    inset: 0 0 auto;
-  }
-
-  footer {
-    inset: auto 0 0;
-  }
+ 
 </style>
