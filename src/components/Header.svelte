@@ -1,32 +1,61 @@
-<nav class="bg-transparent dark:bg-transparent fixed w-full z-20 top-0 left-0 backdrop-blur-lg bg-opacity-0">
-  <div class="max-w-screen-xl flex flex-wrap items-end justify-between mx-auto p-4">
-    <a href="/" class="flex items-center gap-2">
-      <img src="/icon.svg" width="30px" height="30px" alt="">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sanjana</span>
-    </a>
+<script>
+  let showMenu = false;
 
+  function toggleNavbar() {
+    showMenu = !showMenu;
+  }
 
-    <div class="flex md:order-1">
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-      </button>
-    </div>
+  function closeNavbar() {
+    showMenu = false;
+  }
+</script>
 
+<div>
+  <div class="bg-transparent backdrop-blur-lg bg-opacity-0 fixed w-full z-20 top-0 left-0">
+    <nav
+      class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center"
+    >
+      <div class="flex items-center justify-between lg:ml-10">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/icon.svg" width="30px" height="30px" alt="">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sanjana</span>
+        </a>
+        <!-- Mobile menu button -->
+        <div on:click={toggleNavbar} class="flex md:hidden">
+          <button
+            type="button"
+            class="text-gray-100 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
 
-    <div class="items-end hidden w-full md:flex md:w-auto md:order-2">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-transparent md:dark:bg-transparent">
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-pink-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
-        </li>
-        <li>
-          <a href="/about" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-pink-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-pink-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
-  
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <div
+        class="flex-col mr-10 mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 {showMenu
+          ? 'flex'
+          : 'hidden'}"
+      >
+        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/">Home</a>
+        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/about">About Me</a>
+        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/contact">Contact</a>
+        
+        
+      </div>
+    </nav>
+  </div>
+</div>

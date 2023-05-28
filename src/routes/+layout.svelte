@@ -5,22 +5,35 @@
 
 </script>
 
-<body class="bg-slate-950">
+<body class="bg-slate-950 flex flex-col flex-1">
   <header>
     <Header />
   </header>
 
-  <div class="flex flex-col flex-1">
+  <div class="">
     <!-- Content -->
     <slot />
-    <footer class="mt-0">
-      <Footer />
-    </footer>
+    
   </div>
+  <footer class="lg:mt-40">
+    <Footer />
+  </footer>
 
   
 </body>
 
 <style>
- 
+   body {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+  }
+
+  @keyframes fade-in {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 </style>
