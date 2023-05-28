@@ -9,7 +9,7 @@
       
       
 
-  <section class="text-gray-600 body-font lg:ml-20">
+  <section class="mt-5 text-gray-600 body-font lg:ml-20">
     <div class="container mx-auto flex flex-col-reverse px-5 py-20 md:flex-row flex-col items-center">
       
       <div class="lg:max-w-md lg:w-2/5 md:w-1/2 w-5/6 lg:mr-20 lg:mt-20 order-last mb:order-first">
