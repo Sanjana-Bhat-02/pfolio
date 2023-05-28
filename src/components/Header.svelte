@@ -52,7 +52,7 @@
       >
         <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/">Home</a>
         <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/about">About Me</a>
-        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/contact">Contact</a>
+        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/contact">Interests</a>
         
         
       </div>
