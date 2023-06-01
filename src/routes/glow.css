@@ -1,0 +1,26 @@
+  .glow-orange:hover {
+    text-shadow: 0 0 5px #ff7f00, 0 0 20px #ff7f00;
+  }
+  .glow-green:hover {
+    text-shadow: 0 0 5px #679d5a, 0 0 20px #679d5a;
+  }
+
+  .glow-light-blue:hover {
+    text-shadow: 0 0 5px #87ceeb, 0 0 20px #87ceeb;
+  }
+
+  .glow-medium-blue:hover {
+    text-shadow: 0 0 5px #0000cd, 0 0 20px #0000cd;
+  }
+
+  .glow-yellow:hover {
+    text-shadow: 0 0 5px #ffd700, 0 0 20px #ffd700;
+  }
+
+  .glow-red:hover {
+    text-shadow: 0 0 5px #cf3d15, 0 0 20px #cf3d15;
+  }
+
+  .glow-purple:hover {
+    text-shadow: 0 0 5px #5f2172, 0 0 20px #5f2172,  0 0 30px #5f2172;
+  }

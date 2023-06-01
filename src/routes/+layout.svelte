@@ -2,10 +2,9 @@
   import Header from "../components/Header.svelte";
   import Footer from "../components/Footer.svelte";
   import "./styles.css";
-
 </script>
 
-<body class="bg-slate-950 flex flex-col flex-1">
+<body class="bg-slate-950 flex flex-col flex-1"  >
   <header>
     <Header />
   </header>

@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
   let showMenu = false;
 
   function toggleNavbar() {
@@ -8,6 +10,16 @@
   function closeNavbar() {
     showMenu = false;
   }
+
+  onMount(() => {
+    document.body.addEventListener("click", function (event) {
+      const header = document.querySelector("header");
+      const isClickedOutsideHeader = !header.contains(event.target);
+      if (isClickedOutsideHeader) {
+        closeNavbar();
+      }
+    });
+  });
 </script>
 
 <div>
@@ -50,9 +62,9 @@
           ? 'flex'
           : 'hidden'}"
       >
-        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/">Home</a>
-        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/about">About Me</a>
-        <a class="text-gray-100 hover:text-blue-400" on:click={closeNavbar} href="/interests">Interests</a>
+        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/">Home</a>
+        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/about">About Me</a>
+        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/interests">Interests</a>
         
         
       </div>
