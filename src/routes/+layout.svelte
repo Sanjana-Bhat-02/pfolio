@@ -4,31 +4,28 @@
   import "./styles.css";
 </script>
 
-<body class="bg-slate-950 flex flex-col flex-1"  >
+<body class="bg-slate-950 flex flex-col flex-1">
   <header>
     <Header />
   </header>
 
   <div class="">
-    <!-- Content -->
     <slot />
-    
   </div>
+  
   <footer class="lg:mt-40">
     <Footer />
   </footer>
-
-  
 </body>
 
 <style>
-   body {
+  body {
     opacity: 0;
     animation: fade-in 1s ease-in forwards;
   }
 
   @keyframes fade-in {
-    from{
+    from {
       opacity: 0;
     }
     to {

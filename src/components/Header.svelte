@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from "svelte";
+  import { onMount } from "svelte";
 
   let showMenu = false;
 
@@ -23,16 +23,21 @@
 </script>
 
 <div>
-  <div class="bg-transparent backdrop-blur-lg bg-opacity-0 fixed w-full z-20 top-0 left-0">
+  <div
+    class="bg-transparent backdrop-blur-lg bg-opacity-0 fixed w-full z-20 top-0 left-0"
+  >
     <nav
       class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center"
     >
       <div class="flex items-center justify-between lg:ml-10">
         <a href="/" class="flex items-center gap-2">
-          <img src="/icon.svg" width="30px" height="30px" alt="">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Sanjana</span>
+          <img src="/icon.svg" width="30px" height="30px" alt="" />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Sanjana</span
+          >
         </a>
-        <!-- Mobile menu button -->
+
         <div on:click={toggleNavbar} class="flex md:hidden">
           <button
             type="button"
@@ -56,17 +61,26 @@
         </div>
       </div>
 
-      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
       <div
-        class="flex-col mr-10 mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 {showMenu
+        class="flex-col mr-10 mt-8 space-y-4  md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0  {showMenu
           ? 'flex'
           : 'hidden'}"
       >
-        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/">Home</a>
-        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/about">About Me</a>
-        <a class="text-gray-100  hover:text-blue-400" on:click={closeNavbar} href="/interests">Interests</a>
-        
-        
+        <a
+          class="text-gray-100 hover:text-blue-400"
+          on:click={closeNavbar}
+          href="/">Home</a
+        >
+        <a
+          class="text-gray-100 hover:text-blue-400"
+          on:click={closeNavbar}
+          href="/about">About Me</a
+        >
+        <a
+          class="text-gray-100 hover:text-blue-400"
+          on:click={closeNavbar}
+          href="/projects">Projects</a
+        >
       </div>
     </nav>
   </div>

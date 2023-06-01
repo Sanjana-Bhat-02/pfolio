@@ -1,6 +1,6 @@
 <script>
   import "../routes/styles.css";
-  import "../routes/glow.css"
+  import "../routes/glow.css";
 </script>
 
 <section class="text-gray-400 body-font lg:pt-40">
@@ -16,8 +16,7 @@
       <p class="leading-relaxed text-2xl mb:text-lg">
         oh wanderer of the digital realm. I am Sanjana Bhat, an enigmatic
         frontend apprentice shrouded in the mysteries of the web. With a whisper
-        of HTML and a flicker of CSS, I navigate the labyrinthine depths of
-        code.
+        of HTML and a flicker of CSS, I navigate the intricate depths of code.
       </p>
     </div>
     <div
