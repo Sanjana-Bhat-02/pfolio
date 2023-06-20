@@ -34,7 +34,7 @@
   }
 
   main {
-  height: 1px;
-  width: 1px;
+  height: auto;
+  width: auto;
 }
 </style>
