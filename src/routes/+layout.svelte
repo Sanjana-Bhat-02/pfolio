@@ -32,4 +32,9 @@
       opacity: 1;
     }
   }
+
+  main {
+  height: 1px;
+  width: 1px;
+}
 </style>
