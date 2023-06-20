@@ -9,9 +9,9 @@
     <Header />
   </header>
 
-  <div class="">
+  <main>
     <slot />
-  </div>
+  </main>
   
   <footer class="lg:mt-40">
     <Footer />
