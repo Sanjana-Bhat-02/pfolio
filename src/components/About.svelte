@@ -128,8 +128,8 @@
           With my camera in hand, I capture moments, freeze memories, and tell
           stories through the snapshots I take.
         </p>
-        <a class="mt-3 text-indigo-500 inline-flex items-center"
-          >Learn More
+        <a href="/photo" class="mt-3 text-indigo-500 inline-flex items-center"
+          >Go to Gallery
           <svg
             fill="none"
             stroke="currentColor"

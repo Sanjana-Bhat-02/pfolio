@@ -81,6 +81,11 @@
           on:click={closeNavbar}
           href="/projects">Projects</a
         >
+        <a
+          class="text-gray-100 hover:text-blue-400"
+          on:click={closeNavbar}
+          href="/photo">Gallery</a
+        >
       </div>
     </nav>
   </div>
