@@ -26,7 +26,7 @@
           Computer Science Student.<br /> Aspiring Frontend Developer.<br
           />Loves Cats.
         </p>
-        <a href="/about" target="_blank">
+        <a href="/about">
           <button
             class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
             >Learn More About Me</button

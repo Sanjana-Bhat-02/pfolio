@@ -55,7 +55,7 @@
           >
             <img
               class="lg:h-48 md:h-36 w-full object-cover object-center"
-              src="/kitty.PNG"
+              src="/photo.PNG"
               alt="blog"
             />
             <div class="p-6">
@@ -96,7 +96,7 @@
           >
             <img
               class="lg:h-48 md:h-36 w-full object-cover object-center"
-              src="/kitty.PNG"
+              src="/image.PNG"
               alt="blog"
             />
             <div class="p-6">
