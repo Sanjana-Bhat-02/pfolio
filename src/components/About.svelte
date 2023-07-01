@@ -19,7 +19,7 @@
   ];
 </script>
 
-<section class="text-gray-400 body-font lg:pt-40">
+<section class="md:p-0 text-gray-400 body-font lg:pt-40">
   <div class="container flex flex-wrap px-5 py-24 mx-auto items-center">
     <div
       class="slide-left md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200 pl-2"
@@ -311,7 +311,7 @@
           </div>
         </div>
       </div>
-      <div class="animation ml-24 mt-0">
+      <div class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12">
         <LottiePlayer
           src="https://assets7.lottiefiles.com/packages/lf20_KWUxUaGUE7.json"
           autoplay={true}
@@ -319,8 +319,7 @@
           controls={false}
           renderer="svg"
           background="transparent"
-          height={600}
-          width={600}
+          
           {controlsLayout}
         />
       </div>
@@ -343,6 +342,10 @@
     .flex-wrap {
       justify-content: center;
     }
+
+    /* .animation {
+      width: 35%;
+    } */
   }
 
   div {
